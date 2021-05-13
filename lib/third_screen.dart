@@ -10,10 +10,14 @@ class ThirdScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+     appBar: AppBar(title: Text("Tela 3"),
+    ),
+      
       body: SafeArea(
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [ 
                Container(
               child: ElevatedButton(
@@ -30,3 +34,4 @@ class ThirdScreen extends StatelessWidget {
       );
   }
 }
+

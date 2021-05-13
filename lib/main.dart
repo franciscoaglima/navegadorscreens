@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Home Screen",
+ 
+     // title: "Home Screen",
       home: HomeScreen(),
 //      routes: {
  //       "2o Tela" : (context) => SecondScreen(titulo),
