@@ -5,8 +5,7 @@ import 'package:navegadorscreens/third_screen.dart';
 
 class SecondScreen extends StatelessWidget {
   final String titulo;
-
-
+  
   SecondScreen(this.titulo, {Key key}): super(key: key);
 
   @override

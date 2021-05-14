@@ -39,17 +39,16 @@ class ThirdScreen extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => FourthScreen("Fourth Screen")),
                           );
                             setState(() {});
-                                                        }, 
-                                                        child: Text("Tela 4"),
-                                                        ),
-                                                      ),                     
-                                           ],
-                                          ),
-                                      ),
-                                    ),
-                                  );
-                              }
-                            
-                              void setState(Null Function() param0) {}
+                        }, 
+                      child: Text("Tela 4"),
+                      ),
+                     ),                     
+                    ],
+                   ),
+                  ),
+                 ),
+                );
+            }
+            void setState(Null Function() param0) {}
 }
 
