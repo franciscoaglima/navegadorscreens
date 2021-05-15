@@ -20,14 +20,7 @@ class ThirdScreen extends StatelessWidget {
             
             mainAxisAlignment: MainAxisAlignment.center,
             children: [ 
-               Container(
-              child: ElevatedButton(
-                   onPressed: () {
-                     Navigator.pop(context,"Veio da tela 3...");
-                   }, 
-                   child: Text("Voltar"),
-                   ),
-                 ),
+
                 Container(
                 padding: EdgeInsets.all(20.0),
               //  color: Colors.blue,
@@ -42,8 +35,16 @@ class ThirdScreen extends StatelessWidget {
                         }, 
                       child: Text("Tela 4"),
                       ),
-                     ),                     
-                    ],
+                     ),  
+                  Container(
+                  child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.pop(context,"Veio da tela 3...");
+                      }, 
+                      child: Text("Voltar"),
+                      ),
+                    ),                                        
+                        ],
                    ),
                   ),
                  ),

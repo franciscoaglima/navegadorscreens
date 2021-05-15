@@ -11,28 +11,18 @@ class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     appBar: AppBar(title: Text("Tela 2"),
-    ),
-      
+    appBar: AppBar(title: Text("Segunda Tela"),
+   ),
       body: SafeArea(
         child: Center(
           child: Column(
-            
             mainAxisAlignment: MainAxisAlignment.center,
             children: [ 
-               Container(
-              child: ElevatedButton(
-                   onPressed: () {
-                     Navigator.pop(context,"Veio da tela 2...");
-                   }, 
-                   child: Text("Voltar"),
-                   ),
-                 ),
                 Container(
                 padding: EdgeInsets.all(20.0),
-              //  color: Colors.blue,
-                  //decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Colors.amber),
-                  child: ElevatedButton(
+                 // color: Colors.blue,
+                 // decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Colors.amber),
+                child: ElevatedButton(
                       onPressed: () async {
                         Navigator.push(
                           context,
@@ -40,9 +30,9 @@ class SecondScreen extends StatelessWidget {
                           );
                             setState(() {});
                             }, 
-                            child: Text("Tela 3"),
+                            child: Text("Terceira Tela"),
                             ),
-                          ),          
+                 ),
                 Container(
                 padding: EdgeInsets.all(20.0),
               //  color: Colors.blue,
@@ -55,15 +45,23 @@ class SecondScreen extends StatelessWidget {
                           );
                             setState(() {});
                             }, 
-                            child: Text("Tela 4"),
+                            child: Text("Quarta Tela"),
                             ),
-                          ),                                    
-                          ],
+                          ),  
+                    Container(
+                    child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.pop(context,"Segunda Tela");
+                        }, 
+                        child: Text("Voltar"),
                         ),
                       ),
+                     ],
                     ),
-                   );
-                  }
+                   ),
+                  ),
+                 );
+                }
                 
-                  void setState(Null Function() param0) {}
+        void setState(Null Function() param0) {}
 }

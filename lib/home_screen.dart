@@ -24,12 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // ElevatedButton(
-          //   onPressed: () async {
-          //    Navigator.pushNamed(context,"terceiro 1",);
-          //   },
-          //   child: Text("Tela 1"),
-          //  ),
+
           Container(
             padding: EdgeInsets.all(20.0),
             //color: Colors.blue,
@@ -41,12 +36,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   MaterialPageRoute(
                       builder: (context) => SecondScreen("Second Screen")),
                 );
-                
                 setState(() {
-                  texto = resultadoPop;
+                  // texto = resultadoPop;
+                          texto = "Main Screen"; 
                 });
               },
-              child: Text("Tela 2"),
+              child: Text("Segunda Tela"),
             ),
           ),
           Container(
@@ -61,31 +56,19 @@ class _HomeScreenState extends State<HomeScreen> {
                       builder: (context) => ThirdScreen("Third Screen")),
                 );
                 setState(() {
-                  texto = resultadoPop;
+                //  texto = resultadoPop;
+                  texto = "Main Screen"; 
                 });
               },
-              child: Text("Tela 3"),
+              child: Text("Terceira Tela"),
             ),
           ),
-          Container(
-            padding: EdgeInsets.all(20.0),
-            //color: Colors.blue,
-            //decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Colors.amber),
-            child: ElevatedButton(
-              onPressed: () async {
-                final resultadoPop = await Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => FourthScreen("Fourth Screen")),
-                );
-                setState(() {
-                  texto = resultadoPop;
-                });
-              },
-              child: Text("Tela 4"),
+          ElevatedButton(
+             onPressed: ()  {
+              Navigator.pushNamed(context,"fourth");
+             },
+             child: Text("Quarta Tela"),
             ),
-          ),
-          //  Material(child: Text(texto)),
         ],
       ),
     );
