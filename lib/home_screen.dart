@@ -11,6 +11,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   String texto = "Main Screen";
+  String texto1 = "Nenhum";
 
     @override
   Widget build(BuildContext context) {
@@ -24,21 +25,25 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-
+            Text(texto1),
           Container(
             padding: EdgeInsets.all(20.0),
             //color: Colors.blue,
             //decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: Colors.amber),
             child: ElevatedButton(
               onPressed: () async {
-                final resultadoPop = await Navigator.push(
+                var resultadoPop = await Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => SecondScreen("Second Screen")),
                 );
+
+                  if (resultadoPop == null) {
+                       resultadoPop = "Main Screen"; 
+                  }
                 setState(() {
-                  // texto = resultadoPop;
-                          texto = "Main Screen"; 
+                   texto1 = resultadoPop;
+                    texto = "Main Screen"; 
                 });
               },
               child: Text("Segunda Tela"),
@@ -56,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       builder: (context) => ThirdScreen("Third Screen")),
                 );
                 setState(() {
-                //  texto = resultadoPop;
+                 texto1 = resultadoPop;
                   texto = "Main Screen"; 
                 });
               },
